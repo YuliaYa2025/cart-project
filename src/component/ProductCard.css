@@ -1,0 +1,186 @@
+/* Import Red Hat Text font */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;600;700&display=swap');
+
+/* ProductCard Component Styles - For Cart Items */
+.product-card {
+    font-family: 'Red Hat Text', sans-serif;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid hsl(13, 31%, 94%); /* Rose 100 */
+    border-radius: 0;
+    padding: 16px 0;
+    margin: 0;
+    box-shadow: none;
+    transition: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card:hover {
+    box-shadow: none;
+    transform: none;
+}
+
+.product-card:last-child {
+    border-bottom: none;
+}
+
+/* Product Information Section */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 0;
+    flex: 1;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: hsl(14, 65%, 9%); /* Rose 900 */
+    line-height: 1.4;
+    margin: 0 0 8px 0;
+}
+
+.product-category {
+    display: none; /* Hide category in cart view */
+}
+
+.product-price {
+    display: none; /* Hide individual price in cart view */
+}
+
+/* Product pricing display - matches Frontend Mentor format */
+.product-pricing {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    margin: 0;
+}
+
+.product-quantity {
+    font-weight: 600;
+    color: hsl(14, 86%, 42%); /* Red */
+}
+
+.product-unit-price {
+    color: hsl(12, 20%, 44%); /* Rose 500 */
+    font-weight: 400;
+}
+
+.product-line-total {
+    color: hsl(12, 20%, 44%); /* Rose 500 */
+    font-weight: 600;
+}
+
+/* Product Controls Section */
+.product-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    gap: 12px;
+}
+
+/* Hide quantity controls in cart view - Cart.jsx handles this */
+.quantity-controls {
+    display: none;
+}
+
+.quantity-btn {
+    display: none;
+}
+
+.quantity-display {
+    display: none;
+}
+
+/* Remove/Delete Button - styled as × button */
+.delete-btn {
+    background-color: transparent;
+    color: hsl(7, 20%, 60%); /* Rose 400 */
+    border: 2px solid hsl(7, 20%, 60%); /* Rose 400 */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Red Hat Text', sans-serif;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+}
+
+.delete-btn:hover {
+    background-color: hsl(14, 65%, 9%); /* Rose 900 */
+    border-color: hsl(14, 65%, 9%); /* Rose 900 */
+    color: white;
+}
+
+.delete-btn:active {
+    transform: scale(0.95);
+}
+
+/* Product Total - not used in this layout */
+.product-total {
+    display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 375px) {
+    .product-card {
+        padding: 12px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .product-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .product-name {
+        font-size: 13px;
+    }
+    
+    .product-pricing {
+        font-size: 13px;
+        gap: 12px;
+    }
+    
+    .delete-btn {
+        width: 18px;
+        height: 18px;
+        font-size: 11px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1440px) {
+    .product-card {
+        padding: 20px 0;
+    }
+    
+    .product-name {
+        font-size: 15px;
+    }
+    
+    .product-pricing {
+        font-size: 15px;
+        gap: 18px;
+    }
+    
+    .delete-btn {
+        width: 22px;
+        height: 22px;
+        font-size: 13px;
+    }
+}

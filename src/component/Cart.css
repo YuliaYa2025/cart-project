@@ -1,0 +1,354 @@
+/* Import Red Hat Text font */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;600;700&display=swap');
+
+/* Cart Component Styles */
+.cart {
+    font-family: 'Red Hat Text', sans-serif;
+    background-color: white;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    min-height: 300px;
+}
+
+/* Cart Header */
+.cart-header {
+    margin-bottom: 32px;
+}
+
+.cart-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: hsl(14, 86%, 42%); /* Red */
+    margin: 0;
+}
+
+/* Empty Cart State */
+.empty-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.empty-cart-image {
+    width: 128px;
+    height: 128px;
+    margin-bottom: 24px;
+    opacity: 0.7;
+}
+
+.empty-cart-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: hsl(12, 20%, 44%); /* Rose 500 */
+    margin: 0;
+}
+
+/* Cart Items */
+.cart-items {
+    margin-bottom: 32px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid hsl(13, 31%, 94%); /* Rose 100 */
+}
+
+.cart-item:first-child {
+    padding-top: 0;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Cart Item Details */
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: hsl(14, 65%, 9%); /* Rose 900 */
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.cart-item-pricing {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+}
+
+.cart-item-quantity {
+    font-weight: 600;
+    color: hsl(14, 86%, 42%); /* Red */
+}
+
+.cart-item-unit-price {
+    font-weight: 400;
+    color: hsl(12, 20%, 44%); /* Rose 500 */
+}
+
+.cart-item-total {
+    font-weight: 600;
+    color: hsl(12, 20%, 44%); /* Rose 500 */
+}
+
+/* Remove Item Button */
+.remove-item-btn {
+    background-color: transparent;
+    border: 2px solid hsl(7, 20%, 60%); /* Rose 400 */
+    color: hsl(7, 20%, 60%); /* Rose 400 */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-family: 'Red Hat Text', sans-serif;
+    padding: 0;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+.remove-item-btn:hover {
+    background-color: hsl(14, 65%, 9%); /* Rose 900 */
+    border-color: hsl(14, 65%, 9%); /* Rose 900 */
+    color: white;
+}
+
+.remove-item-btn:active {
+    transform: scale(0.95);
+}
+
+/* Order Total */
+.order-total {
+    margin-bottom: 32px;
+    padding-top: 24px;
+    border-top: 1px solid hsl(13, 31%, 94%); /* Rose 100 */
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: hsl(14, 65%, 9%); /* Rose 900 */
+}
+
+.total-amount {
+    font-size: 24px;
+    font-weight: 700;
+    color: hsl(14, 65%, 9%); /* Rose 900 */
+}
+
+/* Carbon Neutral Notice */
+.carbon-neutral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: hsl(20, 50%, 98%); /* Rose 50 */
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+}
+
+.carbon-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.carbon-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: hsl(14, 65%, 9%); /* Rose 900 */
+    text-align: center;
+}
+
+.carbon-text strong {
+    font-weight: 600;
+}
+
+/* Confirm Order Button */
+.confirm-order-btn {
+    width: 100%;
+    background-color: hsl(14, 86%, 42%); /* Red */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Red Hat Text', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.confirm-order-btn:hover:not(:disabled) {
+    background-color: hsl(14, 86%, 35%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(212, 90, 60, 0.3);
+}
+
+.confirm-order-btn:active {
+    transform: translateY(0);
+}
+
+.confirm-order-btn:disabled {
+    background-color: hsl(7, 20%, 60%); /* Rose 400 */
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .cart {
+        max-width: 400px;
+        padding: 28px;
+    }
+    
+    .cart-title {
+        font-size: 22px;
+    }
+    
+    .total-amount {
+        font-size: 22px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .cart {
+        padding: 24px;
+        max-width: 100%;
+        margin-bottom: 24px;
+    }
+    
+    .cart-title {
+        font-size: 20px;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px 0;
+    }
+    
+    .cart-item-details {
+        width: 100%;
+    }
+    
+    .remove-item-btn {
+        align-self: flex-end;
+        margin-left: 0;
+        margin-top: 8px;
+    }
+    
+    .cart-item-pricing {
+        gap: 12px;
+        font-size: 13px;
+    }
+    
+    .total-amount {
+        font-size: 20px;
+    }
+    
+    .confirm-order-btn {
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+    
+    .empty-cart {
+        padding: 40px 20px;
+    }
+    
+    .empty-cart-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 375px) {
+    .cart {
+        padding: 20px;
+    }
+    
+    .cart-header {
+        margin-bottom: 24px;
+    }
+    
+    .cart-items {
+        margin-bottom: 24px;
+    }
+    
+    .order-total {
+        margin-bottom: 24px;
+    }
+    
+    .carbon-neutral {
+        margin-bottom: 24px;
+        padding: 12px;
+    }
+    
+    .carbon-text {
+        font-size: 13px;
+    }
+}
+
+/* Desktop Large Styles */
+@media (min-width: 1440px) {
+    .cart {
+        padding: 40px;
+        max-width: 500px;
+    }
+    
+    .cart-title {
+        font-size: 28px;
+    }
+    
+    .cart-item-name {
+        font-size: 15px;
+    }
+    
+    .cart-item-pricing {
+        font-size: 15px;
+        gap: 18px;
+    }
+    
+    .total-amount {
+        font-size: 28px;
+    }
+    
+    .remove-item-btn {
+        width: 22px;
+        height: 22px;
+        font-size: 13px;
+    }
+}
